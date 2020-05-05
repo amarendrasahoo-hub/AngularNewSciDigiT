@@ -1,0 +1,40 @@
+<!-- <div>
+  <img src="assets/images/asset-request.jpg">
+</div> -->
+<br>
+<div>
+<!-- <ngb-tabset [justify]="currentJustify">
+  <ngb-tab>
+    <ng-template ngbTabTitle><b>Software / Hardware</b></ng-template>
+    <ng-template ngbTabContent>
+      <app-hardsoft></app-hardsoft>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><b>Shared Folder Access</b></ng-template>
+    <ng-template ngbTabContent>
+      <app-sharedfolder></app-sharedfolder>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><b>USB/Pen Drive Access</b></ng-template>
+    <ng-template ngbTabContent>
+      <app-usb-access></app-usb-access>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+      <ng-template ngbTabTitle><b>Webmail Access</b></ng-template>
+      <ng-template ngbTabContent>
+        <app-webmail-access></app-webmail-access>
+      </ng-template>
+    </ngb-tab>
+</ngb-tabset> -->
+
+<mat-tab-group animationDuration="0ms" mat-align-tabs="center">
+  <mat-tab label="Software / Hardware"><app-hardsoft></app-hardsoft></mat-tab>
+  <mat-tab label="Shared Folder Access"><app-sharedfolder></app-sharedfolder></mat-tab>
+  <mat-tab label="USB/Pen Drive Access"><app-usb-access></app-usb-access></mat-tab>
+  <mat-tab label="Webmail Access"><app-webmail-access></app-webmail-access></mat-tab>
+</mat-tab-group>
+
+</div>
