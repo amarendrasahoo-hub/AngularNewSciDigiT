@@ -67,7 +67,7 @@ data : { id: string,
 
   ngOnInit() {
 
-    this.workflowService.getWorkflow('4702')
+    this.workflowService.getWorkflow('2222')
     .subscribe(
       (data) => {
         this.MyDataSource = new MatTableDataSource(); 
@@ -161,7 +161,12 @@ data : { id: string,
                    this.workflowService.updateWorkflow(workflowdata)
                    .subscribe( (resp : WorkflowResponse) => {
                      console.log(resp);
-                    this.ApprovalMessage = "Wrokflow " + resp.workflowId + " is approved by You..! The next Approver is " + resp.nextApprover;
+                     if (resp.completed == true  ){
+                      this.ApprovalMessage = "Wrokflow " + resp.workflowId + " is approved by You";
+                     }
+                     else{
+                      this.ApprovalMessage = "Wrokflow " + resp.workflowId + " is approved by You..! The next Approver is " + resp.nextApprover;
+                     }
                     },
                     (error : any ) => {
                       console.log(error);

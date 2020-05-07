@@ -16,9 +16,10 @@ export class WorkflowService{
   constructor(private http : HttpClient) {   }
 
   getWorkflow(userid : string): Observable<Workflow[]>{
-   this.getUrl = this.getUrl + '/' + userid;
-    return this.http.get<Workflow[]>(this.getUrl);
-    console.log(this.getUrl);
+   let url = this.getUrl + '/' + userid;
+   console.log("URL - ", url);
+
+    return this.http.get<Workflow[]>(url);
    // return this.http.get<Workflow>(this.url);
   //  return this.http
   //  .get(this.url)
