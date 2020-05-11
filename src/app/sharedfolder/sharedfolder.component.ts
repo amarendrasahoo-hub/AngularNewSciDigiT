@@ -55,19 +55,20 @@ export class SharedfolderComponent implements OnInit {
       const sharedfolderaccessreq = {
         reqNo:'',
         reqSrNo: 0,
-        processId: '',
-        reqBy: '',
-        useBy: '',
+        processId: 'SF',
+        reqBy: 'SS004700', //to be taken from user emp code logged in
+        useBy: this.sharedfolderForm.value.useBy,
         userAd: this.sharedfolderForm.value.ad,
         accessType: this.sharedfolderForm.value.typeofAccess,
         folder_name: this.sharedfolderForm.value.folder_name,
         reason: this.sharedfolderForm.value.reason,
         reqDate: date,
         reqTime: date.toLocaleTimeString(),
-        workflowId: ''
+        workflowId: '',
+        department : 'B&T'
       };
       
-      this.sharedfolderaccessservice.postSharedFolderAccessReq(this.sharedfolderaccessreq).
+      this.sharedfolderaccessservice.postSharedFolderAccessReq(sharedfolderaccessreq).
       subscribe((data: PostResponse) => { 
         const resData = data;
         console.log("success:", resData);

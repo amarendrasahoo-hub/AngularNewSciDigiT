@@ -40,7 +40,8 @@ export class WebmailAccessComponent implements OnInit {
       emailId : this.webmailaccessForm.value.currentEmailID,
       reqDate : date,
       reqTime : date.toLocaleTimeString(),
-      workflowId : ""
+      workflowId : "",
+      department : 'B&T'
     };
     this.webmailAccessService.postWebmailReq(webmailAccessReq)
     .subscribe((data: PostResponse) => { 

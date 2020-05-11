@@ -14,7 +14,7 @@ import { PostResponse } from '../model/post-response';
 export class MyAssetService {
 
   private url = 'http://10.20.11.46:3000/angular_myAsset1';
-  private urlpost = 'http://10.20.33.79:3000/angular_postAssetRequest';
+  private urlpost = 'http://localhost/3000/assets/hardsoft/create';
   public abc = [];
   myassetnormal: any;
   constructor(private http: HttpClient) { }
